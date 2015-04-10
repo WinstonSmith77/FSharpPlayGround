@@ -48,8 +48,12 @@
     <Reference Include="System.Numerics" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Program.fs" />
+    <Compile Include="math.fs" />
+    <Compile Include="example.fs" />
+    <Compile Include="dummydata.fs" />
+    <Compile Include="ooStuff.fs" />
     <None Include="App.config" />
+    <Compile Include="Program.fs" />
   </ItemGroup>
   <PropertyGroup>
     <MinimumVisualStudioVersion Condition="'$(MinimumVisualStudioVersion)' == ''">11</MinimumVisualStudioVersion>

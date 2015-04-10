@@ -2,9 +2,31 @@
 // See the 'F# Tutorial' project for more help.
 namespace FSharpPlayground
 module first=
-
     open System.Drawing
     open System
+    open System.Text.RegularExpressions
+
+    open ooStuff
+     
+    
+    
+    Greeter.Instance.SayHello()
+
+  
+
+   
+
+    let private hexPattern =
+        Regex("^#(?<color>[\dA-F]{8})$", RegexOptions.IgnoreCase ||| RegexOptions.Compiled)
+
+    type Color with
+        static member FromHex(hex) =
+            match hexPattern.Match hex with
+            | matches when matches.Success ->
+             Color.FromArgb <| Convert.ToInt32(matches.Groups.["color"].Value, 16)
+            | _ -> Color.Empty
+            member x.ToHex() = sprintf "#%02X%02X%02X%02X" x.A x.R x.G x.B
+
 
     let order list sortFunc =
         List.sortBy sortFunc list
