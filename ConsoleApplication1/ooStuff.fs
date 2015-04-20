@@ -12,3 +12,8 @@ module ooStuff=
         static member Instance with get() = _instance.Force()
         member x.SayHello() = printfn "hello"   
 
+ type pups =  {
+               A : string;
+               B: bool;
+                }
+

@@ -49,6 +49,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="math.fs" />
+    <Compile Include="tuples.fs" />
     <Compile Include="example.fs" />
     <Compile Include="dummydata.fs" />
     <Compile Include="ooStuff.fs" />
